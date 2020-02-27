@@ -33,7 +33,7 @@ namespace EntityFrameworkIncludeBuilder
             if (entities is ILoadCollection<TEntity, object> prevInclude)
                 includes.AddRange(prevInclude.Build());
 
-            includes.Add(GetInvolvedPropertyName(expression));
+            includes.Add(GetLoadedPropertyName(expression));
             return new LoadCollection<TEntity, TProperty>(entities, includes);
         }
 
@@ -53,7 +53,7 @@ namespace EntityFrameworkIncludeBuilder
             where TProperty : class
         {
             var includes = new List<string>(collection.Build());
-            includes[includes.Count - 1] = $"{includes.Last()}.{GetInvolvedPropertyName(expression)}";
+            includes[includes.Count - 1] = $"{includes.Last()}.{GetLoadedPropertyName(expression)}";
             return new LoadCollection<TEntity, TProperty>(collection, includes);
         }
 
@@ -74,7 +74,7 @@ namespace EntityFrameworkIncludeBuilder
             where TProperty : class
         {
             var includes = new List<string>(collection.Build());
-            includes[includes.Count - 1] = $"{includes.Last()}.{GetInvolvedPropertyName(expression)}";
+            includes[includes.Count - 1] = $"{includes.Last()}.{GetLoadedPropertyName(expression)}";
             return new LoadCollection<TEntity, TProperty>(collection, includes);
         }
 
@@ -113,7 +113,7 @@ namespace EntityFrameworkIncludeBuilder
         /// <typeparam name="TProperty">The type of the related entity to be loaded.</typeparam>
         /// <param name="expression">A lambda expression representing the navigation property to be loaded (<c>x =&gt; x.Property1</c>).</param>
         /// <returns>Name of navigation property.</returns>
-        private static string GetInvolvedPropertyName<TEntity, TProperty>(
+        private static string GetLoadedPropertyName<TEntity, TProperty>(
             Expression<Func<TEntity, TProperty>> expression)
         {
             var body = expression.Body.ToString();

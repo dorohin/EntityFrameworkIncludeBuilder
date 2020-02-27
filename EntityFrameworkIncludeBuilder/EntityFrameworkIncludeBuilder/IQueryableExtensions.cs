@@ -26,7 +26,7 @@ namespace EntityFrameworkIncludeBuilder
             where TEntity : class
             where TProperty : class
         {
-            var navigationProperties = expression.Compile().Invoke(null).Build();
+            var navigationProperties = expression.Compile().Invoke(query).Build();
             query = navigationProperties
                 .Aggregate(query,
                     (current, propertySelector) => current.Include(propertySelector));
