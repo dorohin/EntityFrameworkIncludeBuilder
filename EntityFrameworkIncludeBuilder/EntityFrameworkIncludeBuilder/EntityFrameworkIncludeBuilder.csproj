@@ -9,7 +9,10 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>EntityFrameworkIncludeBuilder is an Entity Framework Core extensions which provide ability to build dynamically Include/ThenInclude chain.</Description>
     <Copyright>Copyright ©2020 Bohdan Dorokhin</Copyright>
-    <NeutralLanguage></NeutralLanguage>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
