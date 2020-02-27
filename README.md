@@ -1,4 +1,7 @@
 # EntityFrameworkIncludeBuilder
+
+[![NuGet](https://img.shields.io/nuget/v/EntityFrameworkIncludeBuilder.svg)](https://www.nuget.org/packages/EntityFrameworkIncludeBuilder/)
+
 `EntityFrameworkIncludeBuilder` is an Entity Framework Core extensions which provide ability to build dynamically `Include/ThenInclude` chain.
 
 ## Usage
