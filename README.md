@@ -42,3 +42,8 @@ One of the easiest ways to contribute is to report issues and participate in dis
 ## License
 
 [MIT](https://github.com/dorohin/EntityFrameworkIncludeBuilder/blob/master/LICENSE)
+
+## Donation
+If this project help you reduce time to develop, you can give me a cup of coffee :) 
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2XKUL52KAA8Q8&source=url)
