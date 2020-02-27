@@ -10,10 +10,11 @@ We add method which provide ability to get all items of `TEntity` type and speci
 // ...
 using EntityFrameworkIncludeBuilder;
 // ...
-
 {
   // ...
-  public IEnumerable<TEntity> GetAll<TEntity>(Expression<Func<IEnumerable<TEntity>, ILoadCollection<TEntity, object>>> includes = null)
+  public IEnumerable<TEntity> GetAll<TEntity>(
+          Expression<Func<IEnumerable<TEntity>, 
+          ILoadCollection<TEntity, object>>> includes = null)
   {
       var query = Table.AsQueryable(); //  DbSet<TEntity>
       return includes == null
@@ -31,6 +32,7 @@ var items = _repository
                                       .Load(x => x.Collection1)
                                         .ThenLoad(x => x.Property2)
                                           .ThenLoad(x => x.Property3));
+//...
 ```
 
 ## Contribute
