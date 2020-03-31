@@ -1,6 +1,6 @@
 # EntityFrameworkIncludeBuilder
 
-[![NuGet](https://img.shields.io/badge/nuget-v2.0.0-blue)](https://www.nuget.org/packages/EntityFrameworkIncludeBuilder/)
+[![NuGet](https://img.shields.io/badge/nuget-v2.0.0-blue)](https://www.nuget.org/packages/EntityFrameworkIncludeBuilder/2.0.0)
 [![NuGet](https://img.shields.io/github/license/dorohin/EntityFrameworkIncludeBuilder)](https://github.com/dorohin/EntityFrameworkIncludeBuilder/blob/master/LICENSE)
 
 `EntityFrameworkIncludeBuilder` is an Entity Framework Core extensions which provide ability to build dynamically `Include/ThenInclude` chain.
