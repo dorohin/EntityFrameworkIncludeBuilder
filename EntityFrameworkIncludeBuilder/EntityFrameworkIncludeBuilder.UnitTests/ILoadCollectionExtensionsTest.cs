@@ -19,13 +19,13 @@ namespace EntityFrameworkIncludeBuilder.UnitTests
         }
 
         [TearDown]
-        public void AfterTets()
+        public void AfterTest()
         {
             ClearDbContext();
         }
 
         [Test]
-        public void TestWithoudInclude()
+        public void TestWithoutInclude()
         {
             using var mockDbContext = CreateContext();
             var users = mockDbContext.Users.ToList();
@@ -48,8 +48,8 @@ namespace EntityFrameworkIncludeBuilder.UnitTests
 
             Assert.IsNotEmpty(users);
 
-            var writters = users.Where(x => x.MyPosts.Any());
-            Assert.IsNotEmpty(writters);
+            var writers = users.Where(x => x.MyPosts.Any());
+            Assert.IsNotEmpty(writers);
 
             foreach (var user in users)
                 Assert.IsEmpty(user.Favorites);
@@ -67,8 +67,8 @@ namespace EntityFrameworkIncludeBuilder.UnitTests
 
             Assert.IsNotEmpty(users);
 
-            var writters = users.Where(x => x.MyPosts.Any());
-            Assert.IsNotEmpty(writters);
+            var writers = users.Where(x => x.MyPosts.Any());
+            Assert.IsNotEmpty(writers);
 
             foreach (var user in users)
                 Assert.IsNotEmpty(user.Favorites);
@@ -87,8 +87,8 @@ namespace EntityFrameworkIncludeBuilder.UnitTests
 
             Assert.IsNotEmpty(users);
 
-            var writters = users.Where(x => x.MyPosts.Any());
-            Assert.IsNotEmpty(writters);
+            var writers = users.Where(x => x.MyPosts.Any());
+            Assert.IsNotEmpty(writers);
 
             foreach (var user in users)
             {
