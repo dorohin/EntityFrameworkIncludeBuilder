@@ -16,7 +16,7 @@ namespace EntityFrameworkIncludeBuilder
 
         /// <summary>
         /// Provides ability to specify which navigation properties should be load. If you wish to load additional types based on the navigation
-        /// properties of the type being loaded, then chain a call to <see cref="ThenLoad{TEntity,TPreviousProperty,TProperty}(EntityFrameworkIncludeBuilder.ILoadCollection{TEntity,System.Collections.Generic.ICollection{TPreviousProperty}},System.Linq.Expressions.Expression{System.Func{TPreviousProperty,TProperty}})"/> after this call.
+        /// properties of the type being loaded, then chain a call to <see cref="ThenLoad{TEntity,TPreviousProperty,TProperty}(ILoadCollection{TEntity,ICollection{TPreviousProperty}},Expression{Func{TPreviousProperty,TProperty}})"/> after this call.
         /// </summary>
         /// <typeparam name="TEntity">The entity type.</typeparam>
         /// <typeparam name="TProperty">The type of the related entity to be loaded.</typeparam>
@@ -96,7 +96,8 @@ namespace EntityFrameworkIncludeBuilder
         {
             var type = collection.GetType();
             var method = type.GetMethod(nameof(LoadCollection<TEntity, TProperty>.GetLoadings),
-                             BindingFlags.Instance | BindingFlags.NonPublic) ?? throw new MethodAccessException();
+                             BindingFlags.Instance | BindingFlags.NonPublic)
+                         ?? throw new MethodAccessException();
 
             var loadings = method.Invoke(collection, null) as List<string>;
             return loadings;
