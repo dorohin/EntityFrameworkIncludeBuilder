@@ -53,7 +53,7 @@ namespace EntityFrameworkIncludeBuilder
             where TProperty : class
         {
             var includes = new List<string>(collection.Build());
-            includes[includes.Count - 1] = $"{includes.Last()}.{GetLoadedPropertyName(expression)}";
+            includes[^1] = $"{includes.Last()}.{GetLoadedPropertyName(expression)}";
             return new LoadCollection<TEntity, TProperty>(collection, includes);
         }
 
@@ -74,7 +74,7 @@ namespace EntityFrameworkIncludeBuilder
             where TProperty : class
         {
             var includes = new List<string>(collection.Build());
-            includes[includes.Count - 1] = $"{includes.Last()}.{GetLoadedPropertyName(expression)}";
+            includes[^1] = $"{includes.Last()}.{GetLoadedPropertyName(expression)}";
             return new LoadCollection<TEntity, TProperty>(collection, includes);
         }
 

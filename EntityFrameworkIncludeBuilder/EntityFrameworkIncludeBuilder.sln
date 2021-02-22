@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkIncludeBuilder", "EntityFrameworkIncludeBuilder\EntityFrameworkIncludeBuilder.csproj", "{24B22847-C739-43C7-9578-EB7801253EB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkIncludeBuilder.UnitTests", "EntityFrameworkIncludeBuilder.UnitTests\EntityFrameworkIncludeBuilder.UnitTests.csproj", "{9C22FA1D-4005-43FC-8A8E-CBE3C7B307D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkIncludeBuilder.UnitTests", "EntityFrameworkIncludeBuilder.UnitTests\EntityFrameworkIncludeBuilder.UnitTests.csproj", "{9C22FA1D-4005-43FC-8A8E-CBE3C7B307D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

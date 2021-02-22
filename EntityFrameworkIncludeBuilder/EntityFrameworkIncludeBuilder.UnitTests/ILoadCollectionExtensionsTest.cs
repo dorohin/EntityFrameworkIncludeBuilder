@@ -105,11 +105,10 @@ namespace EntityFrameworkIncludeBuilder.UnitTests
         {
             using var mockDbContext = CreateContext();
             Assert.Throws<InvalidExpressionException>(() =>
-            {
-               _ = mockDbContext.Users
+                _ = mockDbContext.Users
                     .Include(x => x.Load(u => u))
-                    .ToList();
-            });
+                    .ToList()
+            );
         }
 
         [Test]
@@ -117,14 +116,59 @@ namespace EntityFrameworkIncludeBuilder.UnitTests
         {
             using var mockDbContext = CreateContext();
             Assert.Throws<InvalidExpressionException>(() =>
-            {
                 _ = mockDbContext.Users
                     .Include((IEnumerable<User> x) => x
                         .Load(u => u.Favorites)
                             .ThenLoad(f => f.Post)
                                 .ThenLoad(p => p))
-                    .ToList();
-            });
+                    .ToList()
+            );
+        }
+
+        [Test]
+        public void TestIEnumeratorGetEnumerator()
+        {
+            var source = new List<User>
+            {
+                new User
+                {
+                    FirstName = "Test1",
+                    LastName = "A"
+                },
+                new User
+                {
+                    FirstName = "Test2",
+                    LastName = "B"
+                }
+            };
+            var collection = new LoadCollection<User, object>(source, new List<string>());
+            CollectionAssert.AllItemsAreInstancesOfType(collection, typeof(User));
+            CollectionAssert.AreEqual(source, collection);
+        }
+
+        [Test]
+        public void TestGetEnumerator()
+        {
+            var source = new List<User>
+            {
+                new User
+                {
+                    FirstName = "Test1",
+                    LastName = "A"
+                },
+                new User
+                {
+                    FirstName = "Test2",
+                    LastName = "B"
+                }
+            };
+            var collection = new LoadCollection<User, object>(source, new List<string>());
+            CollectionAssert.AllItemsAreInstancesOfType(collection, typeof(User));
+
+            foreach (var user in collection)
+            {
+                CollectionAssert.Contains(source, user);
+            }
         }
 
         #region Private methods

@@ -1,21 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <Authors>Bohdan Dorokhin</Authors>
     <RepositoryUrl>https://github.com/dorohin/EntityFrameworkIncludeBuilder</RepositoryUrl>
     <PackageTags>EF, dotnet, core, include, theninclude</PackageTags>
     <PackageProjectUrl>https://github.com/dorohin/EntityFrameworkIncludeBuilder</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>EntityFrameworkIncludeBuilder is an Entity Framework Core extensions which provide ability to build dynamically Include/ThenInclude chain.</Description>
-    <Copyright>Copyright ©2020 Bohdan Dorokhin</Copyright>
+    <Copyright>Copyright ©2021 Bohdan Dorokhin</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>3.0.0</Version>
-    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <Version>5.0.0</Version>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <FileVersion>5.0.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.3" />
   </ItemGroup>
 
 </Project>
