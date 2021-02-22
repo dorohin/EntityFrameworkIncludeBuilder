@@ -1,6 +1,6 @@
 # EntityFrameworkIncludeBuilder
 
-[![NuGet](https://img.shields.io/nuget/v/EntityFrameworkIncludeBuilder)](https://www.nuget.org/packages/EntityFrameworkIncludeBuilder/)
+[![NuGet](https://img.shields.io/badge/nuget-v3.0.0-blue)](https://www.nuget.org/packages/EntityFrameworkIncludeBuilder/)
 [![NuGet](https://img.shields.io/github/license/dorohin/EntityFrameworkIncludeBuilder)](https://github.com/dorohin/EntityFrameworkIncludeBuilder/blob/master/LICENSE)
 ![.NET Core](https://github.com/dorohin/EntityFrameworkIncludeBuilder/workflows/.NET%20Core/badge.svg)
 
