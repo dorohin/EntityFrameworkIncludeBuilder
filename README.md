@@ -1,14 +1,14 @@
 # EntityFrameworkIncludeBuilder
 
-[![NuGet](https://img.shields.io/nuget/v/EntityFrameworkIncludeBuilder)](https://www.nuget.org/packages/EntityFrameworkIncludeBuilder/)
+[![NuGet](https://img.shields.io/badge/nuget-v5.0.0-blue)](https://www.nuget.org/packages/EntityFrameworkIncludeBuilder/5.0.0)
 [![NuGet](https://img.shields.io/github/license/dorohin/EntityFrameworkIncludeBuilder)](https://github.com/dorohin/EntityFrameworkIncludeBuilder/blob/master/LICENSE)
 ![.NET Core](https://github.com/dorohin/EntityFrameworkIncludeBuilder/workflows/.NET%20Core/badge.svg)
 
-`EntityFrameworkIncludeBuilder` is an Entity Framework Core extensions which provide ability to build dynamically `Include/ThenInclude` chain.
+`EntityFrameworkIncludeBuilder` is an Entity Framework Core extension that provides the ability to build a dynamically `Include/ThenInclude` chain.
 
 ## Usage
 ### 1. Define repository method.
-We add method which provide ability to get all items of `TEntity` type and specify all necessary navigation properties. The user can specify only those navigation properties that he will use.
+We add a method which provides the ability to get all items of `TEntity` type and specify all necessary navigation properties. The user can specify only those navigation properties that he will use.
 
 
 ```csharp
